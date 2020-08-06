@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<script src="jquery-3.2.1.js"></script>
+
+	<title>Jabe Translator</title>
+
+</head>
+
+<body>
+
+	<input type="text" id="jabe" size="100">
+
+	<input type="submit" id="translator" value="Translate">
+
+</body>
+
+<script>
+
+	var i = 0;
+	var x = 0;
+	var translated = [];
+	var translation = "";
+
+	$('#translator').click(function(){
+
+		var jabe = $('#jabe').val();
+
+		while(i<jabe.length){
+
+			if (jabe[i]=="a"){
+				translated[i] = "q";
+			}
+				else if (jabe[i]=="A"){
+					translated[i] = "Q";
+				}
+					else if (jabe[i]=="b"){
+						translated[i] = "w";
+					}
+						else if (jabe[i]=="B"){
+							translated[i] = "W";
+						}
+							else if (jabe[i]=="c"){
+								translated[i] = "e";
+							}
+								else if (jabe[i]=="C"){
+									translated[i] = "E";
+								}
+									else if (jabe[i]=="d"){
+										translated[i] = "r";
+									}
+										else if (jabe[i]=="D"){
+											translated[i] = "R";
+										}
+											else if (jabe[i]=="e"){
+												translated[i] = "t";
+											}
+												else if (jabe[i]=="E"){
+													translated[i] = "T";
+												}
+													else if (jabe[i]=="f"){
+														translated[i] = "y";
+													}
+														else if (jabe[i]=="F"){
+															translated[i] = "Y";
+														}
+															else if (jabe[i]=="g"){
+																translated[i] = "u";
+															}
+																else if (jabe[i]=="G"){
+																	translated[i] = "U";
+																}
+																	else if (jabe[i]=="h"){
+																		translated[i] = "i";
+																	}
+																		else if (jabe[i]=="H"){
+																			translated[i] = "I";
+																		}
+																			else if (jabe[i]=="i"){
+																				translated[i] = "o";
+																			}
+																				else if (jabe[i]=="I"){
+																					translated[i] = "O";
+																				}
+																					else if (jabe[i]=="j"){
+																						translated[i] = "p";
+																					}
+																						else if (jabe[i]=="J"){
+																							translated[i] = "P";
+																						}
+																							else if (jabe[i]=="k"){
+																								translated[i] = "a";
+																							}
+																								else if (jabe[i]=="K"){
+																									translated[i] = "A";
+																								}
+																									else if (jabe[i]=="l"){
+																										translated[i] = "s";
+																									}
+																										else if (jabe[i]=="L"){
+																											translated[i] = "S";
+																										}
+																											else if (jabe[i]=="m"){
+																												translated[i] = "d";
+																											}
+																												else if (jabe[i]=="M"){
+																													translated[i] = "D";
+																												}
+																													else if (jabe[i]=="n"){
+																														translated[i] = "f";
+																													}
+																												else if (jabe[i]=="N"){
+																													translated[i] = "F";
+																												}
+																											else if (jabe[i]=="o"){
+																												translated[i] = "g";
+																											}
+																										else if (jabe[i]=="O"){
+																											translated[i] = "G";
+																										}
+																									else if (jabe[i]=="p"){
+																										translated[i] = "h";
+																									}
+																								else if (jabe[i]=="P"){
+																									translated[i] = "H";
+																								}
+																							else if (jabe[i]=="q"){
+																								translated[i] = "j";
+																							}
+																						else if (jabe[i]=="Q"){
+																							translated[i] = "J";
+																						}
+																					else if (jabe[i]=="r"){
+																						translated[i] = "k";
+																					}
+																				else if (jabe[i]=="R"){
+																					translated[i] = "K";
+																				}
+																			else if (jabe[i]=="s"){
+																				translated[i] = "l";
+																			}
+																		else if (jabe[i]=="S"){
+																			translated[i] = "L";
+																		}
+																	else if (jabe[i]=="t"){
+																		translated[i] = "z";
+																	}
+																else if (jabe[i]=="T"){
+																	translated[i] = "Z";
+																}
+															else if (jabe[i]=="u"){
+																translated[i] = "x";
+															}
+														else if (jabe[i]=="U"){
+															translated[i] = "X";
+														}
+													else if (jabe[i]=="v"){
+														translated[i] = "c";
+													}
+												else if (jabe[i]=="V"){
+													translated[i] = "C";
+												}
+											else if (jabe[i]=="w"){
+												translated[i] = "v";
+											}
+										else if (jabe[i]=="W"){
+											translated[i] = "V";
+										}
+									else if (jabe[i]=="x"){
+										translated[i] = "b";
+									}
+								else if (jabe[i]=="X"){
+									translated[i] = "B";
+								}
+							else if (jabe[i]=="y"){
+								translated[i] = "n";
+							}
+						else if (jabe[i]=="Y"){
+							translated[i] = "N";
+						}
+					else if (jabe[i]=="z"){
+						translated[i] = "m";
+					}
+				else if (jabe[i]=="Z"){
+					translated[i] = "M";
+				}
+					else if (jabe[i]==" "){
+						translated[i] = " ";
+					}
+						else if (jabe[i]=="."){
+							translated[i] = ".";
+						}
+							else if (jabe[i]==","){
+								translated[i] = ",";
+							}
+								else if (jabe[i]=="?"){
+									translated[i] = "?";
+								}
+									else if (jabe[i]=="!"){
+										translated[i] = "!";
+									}
+										else if (jabe[i]=="'"){
+											translated[i] = "'";
+										}
+											else if (jabe[i]==":"){
+												translated[i] = ":";
+											}
+												else if (jabe[i]==";"){
+													translated[i] = ";";
+												}
+													else if (jabe[i]=="0"){
+														translated[i] = "0";
+													}
+														else if (jabe[i]=="9"){
+															translated[i] = "9";
+														}
+															else if (jabe[i]=="8"){
+																translated[i] = "8";
+															}
+																else if (jabe[i]=="7"){
+																	translated[i] = "7";
+																}
+																	else if (jabe[i]=="6"){
+																		translated[i] = "6";
+																	}
+																		else if (jabe[i]=="5"){
+																			translated[i] = "5";
+																		}
+																			else if (jabe[i]=="4"){
+																				translated[i] = "4";
+																			}
+																				else if (jabe[i]=="3"){
+																					translated[i] = "3";
+																				}
+																					else if (jabe[i]=="2"){
+																						translated[i] = "2";
+																					}
+																						else if (jabe[i]=="1"){
+																							translated[i] = "1";
+																						}
+																					else if (jabe[i]=="/"){
+																						translated[i] = "/";
+																					}
+																				else if (jabe[i]=="("){
+																					translated[i] = "(";
+																				}
+																			else if (jabe[i]==")"){
+																				translated[i] = ")";
+																			}
+																		else if (jabe[i]=='"'){
+																			translated[i] = '"';
+																		}
+																	else if (jabe[i]=="@"){
+																		translated[i] = "@";
+																	}
+																else if (jabe[i]=="="){
+																	translated[i] = "=";
+																}
+															else if (jabe[i]=="+"){
+																translated[i] = "+";
+															}
+														else if (jabe[i]=="-"){
+															translated[i] = "-";
+														}
+													else if (jabe[i]=="_"){
+														translated[i] = "_";
+													}
+												else if (jabe[i]=="#"){
+													translated[i] = "#";
+												}
+											else if (jabe[i]=="$"){
+												translated[i] = "$";
+											}
+										else if (jabe[i]=="&"){
+											translated[i] = "&";
+										}
+									else if (jabe[i]=="%"){
+										translated[i] = "%";
+									}
+								else if (jabe[i]=="^"){
+									translated[i] = "^";
+								}
+							else if (jabe[i]=="*"){
+								translated[i] = "*";
+							}
+						else if (jabe[i]=="~"){
+							translated[i] = "~";
+						}
+					else if (jabe[i]=="`"){
+						translated[i] = "`";
+					}
+				else if (jabe[i]=="{"){
+					translated[i] = "{";
+				}
+					else if (jabe[i]=="}"){
+						translated[i] = "}";
+					}
+						else if (jabe[i]=="["){
+							translated[i] = "[";
+						}
+							else if (jabe[i]=="]"){
+								translated[i] = "]";
+							}
+								else if (jabe[i]=="|"){
+									translated[i] = "|";
+								}
+									else if (jabe[i]=="<"){
+										translated[i] = "<";
+									}
+										else if (jabe[i]==">"){
+											translated[i] = ">";
+										}
+
+			i++;
+
+		}
+
+		while(x<translated.length){
+
+			translation += translated[x];
+
+			x++;
+
+		}
+
+		alert(translation);
+
+		i = 0;
+		x = 0;
+		translated = [];
+		translation = "";
+
+	});
+
+</script>
+
+</html>
